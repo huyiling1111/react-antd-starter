@@ -36,12 +36,16 @@ pnpm dlx github:huyiling1111/react-antd-starter my-app   # 从（私有仓需已
 ## 发布到 npm（维护者）
 
 ```bash
-npm login
-# 确认包名 create-react-antd-starter 未被占用
-npm publish --access public
+npm login                                   # 首次发布前登录
+npm view create-react-antd-starter version  # 查包名是否被占用（报 404 = 可用）
+# 每次发布前记得升 package.json 的 version（npm 不允许重复版本号）
+npm publish --access public                 # 非 scoped 包本就是公开的，加该参数最稳妥
 ```
 
 发布后任何人都能 `pnpm create react-antd-starter <目录名>`。
+
+> 若包名已被占用，可改成 scoped 包名（如 `@huyiling1111/create-react-antd-starter`），
+> 对应 `pnpm create @huyiling1111/react-antd-starter <目录名>`。
 
 ## 结构
 
