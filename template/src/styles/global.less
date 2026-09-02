@@ -1,0 +1,40 @@
+// 全局样式：reset + 基础排版。变量已被 Vite 自动注入，直接用 @xxx。
+
+:root {
+  // 把 Less 变量镜像成 CSS 变量，供 JS/inline style / UnoCSS 通过 var() 引用；
+  // .less 文件里请直接用 @masterColor 这类 Less 变量，不用 var()。
+  --master-color: @masterColor;
+  --master-color-light: @masterColor--light;
+  --master-color-dark: @masterColor--dark;
+  --page-color: @pageColor;
+  --mask-color: @maskColor;
+  --text-first: @textColor--first;
+  --text-second: @textColor--second;
+  --text-third: @textColor--third;
+  --text-tips: @textColor--tips;
+  --border-color: @borderColor;
+  --box-shadow: @boxShadow;
+
+  font-family:
+    system-ui, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+  background: @pageColor;
+  color: @textColor--first;
+}

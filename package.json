@@ -1,0 +1,26 @@
+{
+  "name": "create-react-antd-starter",
+  "version": "0.1.0",
+  "description": "React + antd 中后台前端起手模板脚手架（pnpm create react-antd-starter）",
+  "type": "module",
+  "bin": {
+    "create-react-antd-starter": "index.js"
+  },
+  "files": [
+    "index.js",
+    "template"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "react",
+    "antd",
+    "vite",
+    "typescript",
+    "starter",
+    "template",
+    "scaffold"
+  ],
+  "license": "MIT"
+}

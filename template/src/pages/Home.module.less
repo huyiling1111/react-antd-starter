@@ -1,0 +1,31 @@
+// 直接用全局 Less 变量 @xxx（Vite 已自动注入 variables.less）
+
+.card {
+  padding: @space-lg;
+  background: #fff;
+  border: 1px solid @borderColor;
+  border-radius: @radius-md;
+  box-shadow: @boxShadow;
+  transition: box-shadow 0.2s;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.title {
+  margin: 0 0 @space-sm;
+  font-size: 18px;
+  font-weight: 600;
+  color: @textColor--first;
+}
+
+.badge {
+  margin-left: @space-sm;
+  color: @masterColor;
+}
+
+.desc {
+  margin: 0;
+  color: @textColor--second;
+}
